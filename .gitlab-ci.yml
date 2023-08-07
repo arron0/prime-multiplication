@@ -46,7 +46,7 @@ Github release:
   script:
     - git clone $CI_REPOSITORY_URL $CI_COMMIT_SHORT_SHA
     - cd $CI_COMMIT_SHORT_SHA
-    - git remote add github https://${GITHUB_TOKEN}@github.com/arron0/testit.git
+    - git remote add github https://${GITHUB_TOKEN}@github.com/arron0/prime-multiplication.git
     - git push github HEAD:master --tags
   only:
     - master
