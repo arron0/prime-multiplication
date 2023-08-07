@@ -1,5 +1,5 @@
-
-/.idea
-/vendor
-/tests/coverage/*
-/tests/.phpunit.result.cache
+.idea
+vendor
+tests/coverage/*
+tests/.phpunit.result.cache
+tests/.phpunit.cache
