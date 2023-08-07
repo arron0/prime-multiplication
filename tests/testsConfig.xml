@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="bootstrap.php" colors="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd" cacheDirectory=".phpunit.cache">
+  <coverage includeUncoveredFiles="true">
+    <report>
+      <html outputDirectory="coverage/" lowUpperBound="35" highLowerBound="70"/>
+    </report>
+  </coverage>
+  <logging/>
+  <source>
+    <include>
+      <directory suffix=".php">../PrimeMultiplication</directory>
+    </include>
+  </source>
+</phpunit>

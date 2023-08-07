@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  app:
+    container_name: prime-multiplication
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: 8.2
+    volumes:
+      - .:/var/www/html
+    stdin_open: true
+    tty: true
