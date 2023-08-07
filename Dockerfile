@@ -19,10 +19,10 @@ RUN pecl install xdebug-3.2.1 \
 # Copy PHP config
 COPY docker/etc/php $PHP_INI_DIR/conf.d
 
-RUN mkdir -p -m 0777 /var/www/html/temp \
-    && mkdir -p -m 0777 /var/www/html/log
-
 # Install composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
+
+COPY . /var/www/html
+RUN composer install
