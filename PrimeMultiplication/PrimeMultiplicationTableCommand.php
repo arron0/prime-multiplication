@@ -41,16 +41,15 @@ class PrimeMultiplicationTableCommand extends Command
 
 		$multiplicationTable = $this->generator->generate($size);
 
+		$rows = $multiplicationTable->getRows();
+		array_unshift($rows, 'X');
+		$output->writeln(implode("\t", $rows));
+		$counter = 1;
 		foreach ($multiplicationTable->getData() as $data) {
+			array_unshift($data, $rows[$counter]);
 			$output->writeln(implode("\t", $data));
+			$counter++;
 		}
-
-		/*
-		$table = new Table($output);
-		$table->setHeaders($multiplicationTable->getRows());
-		$table->setRows($multiplicationTable->getData());
-		$table->render();
-		*/
 
 		return Command::SUCCESS;
 	}

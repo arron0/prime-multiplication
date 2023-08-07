@@ -44,7 +44,7 @@ class PrimeMultiplicationTableCommandTest extends TestCase
 			['size' => $size]
 		);
 
-		$this->assertEquals("3\t4\n", $this->command->getDisplay());
+		$this->assertEquals("X\t1\t2\n1\t3\t4\n", $this->command->getDisplay());
 	}
 
 	/**
